@@ -4,7 +4,11 @@ const connectDB = require('./config/db.js');
 
 const app=express();
 
+// Connect database
 connectDB();
+
+// Init Middleware
+app.use(express.json({extended: false}));
 
 const PORT=process.env.PORT || 5000;
 
